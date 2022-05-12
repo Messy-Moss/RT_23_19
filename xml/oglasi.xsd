@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="oglasi">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="oglas">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="kategorija" type="xs:string" />
+							<xs:element name="datum-isteka">
+								<xs:simpleType>
+									<xs:restriction base="xs:date" />
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="cena">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:nonNegativeInteger">
+											<xs:attribute name="valuta" use="required">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="rsd"></xs:enumeration>
+														<xs:enumeration value="eur"></xs:enumeration>
+														<xs:enumeration value="usd"></xs:enumeration>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tekst">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="10"/>
+										<xs:maxLength value="180"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="oznake">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="10" name="oznaka" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="email-ovi">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element maxOccurs="unbounded" name="email">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="tip" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:enumeration value="privatni"></xs:enumeration>
+																	<xs:enumeration value="sluzbeni"></xs:enumeration>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
