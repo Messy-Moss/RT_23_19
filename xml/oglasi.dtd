@@ -1,0 +1,15 @@
+<!ELEMENT oglasi (oglas*)>
+<!ELEMENT oglas (kategorija, datum-isteka, cena, tekst, oznake, email-ovi)>
+<!ELEMENT kategorija (#PCDATA)>
+<!ELEMENT datum-isteka (godina, mesec, dan)>
+<!ELEMENT godina (#PCDATA)>
+<!ELEMENT mesec (#PCDATA)>
+<!ELEMENT dan (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ATTLIST cena valuta (rsd|eur|usd) "rsd">
+<!ELEMENT tekst (#PCDATA)>
+<!ELEMENT oznake (oznaka+)>
+<!ELEMENT oznaka (#PCDATA)>
+<!ELEMENT email-ovi (email+)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email tip (privatni|sluzbeni) >
