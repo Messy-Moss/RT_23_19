@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oglasi>
+    <oglas>
+        <kategorija>Alati</kategorija>
+        <datum-isteka>2023-03-27</datum-isteka>
+        <cena valuta="eur">69420</cena>
+        <tekst>Ovaj alat će vam olakšati život 10 puta!</tekst>
+        <oznake>
+            <oznaka>must-have</oznaka>
+            <oznaka>business</oznaka>
+        </oznake>
+        <email-ovi>
+            <email tip="privatni">test1@test.com</email>
+            <email tip="sluzbeni">test2@test.com</email>
+        </email-ovi>
+    </oglas>
+    <oglas>
+        <kategorija>Tehnika</kategorija>
+        <datum-isteka>2022-07-15</datum-isteka>
+        <cena valuta="rsd">5010</cena>
+        <tekst>
+            SVI OSTALI U POREDJENJU SA OVIM SU IGRACKA KAKO PO KVALITETU,
+            MOGUCNOSTIMA TAKO I OZBILJNOSTI STO NADAM SE POTVRDJUJU I SAME SLIKE.
+            MASAZER DONESEN IZ NEMACKE GDE JE I PROIZVEDEN.
+            MASAZER ZA CELO TELO,NAMENJEN DA SE KORISTI KAKO NA PODU TAKO I KREVETU...
+            MASAZER BEZ OSTECENJA I SLICNOG,PERFEKTAN U SVAKOM POGLEDU,RADJEN CEO U KOZI DA LI JE PRIRODNA,VESTACKA,
+            ILI STA VEC ISKRENO NE BIH ZNAO ALI ONO STO JE BITNO SAVRSENO LAKO ODRZAVANJE,DOVOLJNO GA JE PREBRISATI VLAZNOM KRPOM I UVEK LEPA STVAR.TESTIRAN SVE MASAZNE TACKE RADE SAVRSENO,
+            A NA SAMOM DALJINSKOM MOZETE IZABRATI NEKI OD VEC MEMORISANIH PROGRAMA,RUCNO MENJATI ZONE,AKTIVIRATI SVAKU POJEDINACNO ,RUCNO ZADAVATI,VRSITE ODABIR INTEZITETA PA MOZETE SVE PRILAGODITI KAKO VAMA ODGOVARA.TU JE NEZAVISTAN GREJAC KOJI SE POSEBNO AKTIVIRA I STO JE JAKO BITNO A NEMA SANSE DA NADJETE KOD SLICNIH MOZETE POSTAVITI NA BILO KOJI DEO TELA KAO STO VIDITE PRUZA APSOLUTNO SVE A MASAZER KADA SE NE KORISTI PAKUJE SE NA POLA I IMA SVOJE RUCKE ZA NOSENJE.
+            ISPORUCUJE SE SA NAPAJANJEM TAKO DA KUPAC NEMA DODATNIH TROSKOVA I SPREMAN ZA UPOTREBU.KRECEMO OD DESET DINARA A VI PROCENITE KOLIKO VREDI.
+        </tekst>
+        <oznake>
+            <oznaka>laski-zivot</oznaka>
+        </oznake>
+        <email-ovi>
+            <email tip="sluzbeni">moj-mail@test.com</email>
+        </email-ovi>
+    </oglas>
+    <oglas>
+        <kategorija>Sportska Oprema</kategorija>
+        <datum-isteka>2033-11-13</datum-isteka>
+        <cena valuta="rsd">69420</cena>
+        <tekst>
+            Sve kao na slikama. Kontejner od bambusa sa 5 strela,
+            dve drvene i tri Al. Jacina pri nategu strelom od 80 cm. preko 30 libri.
+        </tekst>
+        <oznake>
+            <oznaka>hobi</oznaka>
+        </oznake>
+        <email-ovi>
+            <email tip="sluzbeni">maaaail@test.com</email>
+        </email-ovi>
+    </oglas>
+</oglasi>
