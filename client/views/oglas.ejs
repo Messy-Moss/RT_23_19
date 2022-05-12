@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="content">
+        <div class="title">
+            <h1><%= data.kategorija %></h1>
+        </div>
+        
+
+        <div class="contact">
+            <h3>Kontakt</h3>
+            <hr>
+            <p>Email: <%= data.email %></p>
+        </div>
+        
+        <div class="description">
+            <h3>Opis</h3>
+            <hr>
+            <p><%= data.tekst %></p>
+        </div>
+
+        <div>
+            <h3>Cena</h3>
+            <hr>
+            <p>Cena: <%= data.cena.iznos %> <%= data.cena.valuta %></p>
+        </div>
+
+        <button class="delete-btn" id="delete" data-id="<%= data.id %>">Obrisi Oglas</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const idToDelete = btn.dataset.id;
+
+        btn.addEventListener('click', async () => {
+            const res = await fetch(`http://localhost:8080/oglasi/${idToDelete}`, {
+                method: 'DELETE'
+            });
+
+            if (res.ok) {
+                window.location.href="/";
+            }
+            const data = await res.json();
+
+            console.log(res);
+        });
+
+
+    </script>
+
+</body>
+</html>

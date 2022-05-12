@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="oglasi content">
+        <h2><%= title %></h2>
+
+        <% if (data) { %>
+            <% data.forEach(oglas => { %>
+                <a href="/oglasi/<%= oglas.id %>">
+                    <div class="box">
+                        <div class="box-top">
+                            <h3 class="title"><%= oglas.kategorija %></h3>
+                            <% if (oglas.oznake.length > 0 && oglas.oznake[0] != "") { %>
+                                <% oglas.oznake.forEach(oznaka => { %>
+                                    <span class="tags"><%= oznaka %></span>
+                                <% })%>
+                            <% } %>
+                        </div>
+                        <p class="snippet">
+                            <span style="color:#555; padding-right:15px">Vazi do:</span>
+                            <span style="font-weight:400;"><%= oglas.datumIsteka %></span>
+                        </p>
+                        <p class="cena"><%= oglas.cena.iznos %> <%= oglas.cena.valuta %></p>
+                    </div>
+                </a>
+            <% }) %>
+        <% } else {%>
+            <p>Nepostoji ni jedan oglas za prikaz</p>
+        <% } %>
+    </div>
+
+</body>
+</html>
