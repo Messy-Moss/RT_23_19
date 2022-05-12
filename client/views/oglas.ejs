@@ -9,26 +9,21 @@
         <div class="title">
             <h1><%= data.kategorija %></h1>
         </div>
-        
-
         <div class="contact">
             <h3>Kontakt</h3>
             <hr>
             <p>Email: <%= data.email %></p>
         </div>
-        
         <div class="description">
             <h3>Opis</h3>
             <hr>
             <p><%= data.tekst %></p>
         </div>
-
         <div>
             <h3>Cena</h3>
             <hr>
-            <p>Cena: <%= data.cena.iznos %> <%= data.cena.valuta %></p>
+            <p>Cena: <%= data.cena?.iznos %> <%= data.cena?.valuta %></p>
         </div>
-
         <button class="delete-btn" id="delete" data-id="<%= data.id %>">Obrisi Oglas</button>
     </div>
 
@@ -48,9 +43,6 @@
 
             console.log(res);
         });
-
-
     </script>
-
 </body>
 </html>

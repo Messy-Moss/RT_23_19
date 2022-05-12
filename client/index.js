@@ -6,13 +6,14 @@ const PORT = 4000;
 
 const app = express();
 
+app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs')
 
 app.get('/', async (req, res) => {
     const { data } = await axios.get(`http://localhost:8080/oglasi${req.url}`);
-    console.log(typeof data);
     res.render('index', { title: 'Svi Oglasi', data });
 });
 
