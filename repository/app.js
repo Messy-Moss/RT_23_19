@@ -26,7 +26,7 @@ const addOne = async (payload) => {
         const data = await getAll();
 
         let id = 1;
-        if (data[data.length - 1].id)
+        if (data[data.length - 1] && data[data.length - 1].id)
             id = data[data.length - 1].id + 1;
 
         payload.id = id;
