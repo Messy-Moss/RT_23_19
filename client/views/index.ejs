@@ -8,7 +8,7 @@
     <div class="oglasi content">
         <h2><%= title %></h2>
 
-        <% if (data) { %>
+        <% if (data.length) { %>
             <% data.forEach(oglas => { %>
                 <a href="/oglasi/<%= oglas.id %>">
                     <div class="box">
@@ -29,7 +29,7 @@
                 </a>
             <% }) %>
         <% } else {%>
-            <p>Nepostoji ni jedan oglas za prikaz</p>
+            <p style="color: red">Ne postoji ni jedan oglas za prikaz</p>
         <% } %>
     </div>
 
